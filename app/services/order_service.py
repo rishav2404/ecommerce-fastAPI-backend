@@ -68,7 +68,7 @@ class OrderService:
             }
             
             # Insert order
-            result = await collection.insert_one(order_doc)
+            result = collection.insert_one(order_doc)
             order_id = str(result.inserted_id)
             
             # Update inventory for each product

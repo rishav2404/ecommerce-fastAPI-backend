@@ -74,7 +74,7 @@ async def get_user_orders(
         if not user_id.strip():
             raise HTTPException(status_code=400, detail="User ID cannot be empty")
         
-        result = await order_service.get_user_orders(
+        result = order_service.get_user_orders(
             user_id=user_id.strip(),
             limit=limit,
             offset=offset
